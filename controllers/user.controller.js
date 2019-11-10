@@ -11,18 +11,8 @@ const Product = mongoose.model('Product');
 const Customer = mongoose.model('Customer');
  const Order = mongoose.model('Order');
 
- 
- 
-
- 
    
 
-
-
-
-  
-
-  
 
 
 module.exports.findproduct = (req, res) => {
