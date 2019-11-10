@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const path = require('path');
+const tableRoutes = require('./routes/TableController');
+const menuRoutes = require('./routes/MenuController');
 
 const rtsIndex = require('./routes/index.router');
  
@@ -21,6 +23,9 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
+app.use('/api/tables',tableRoutes);
+app.use('/api/menu',menuRoutes);
+
  
 app.use('/api/imgs', express.static(path.join(__dirname, "assets","imeges")));
     
